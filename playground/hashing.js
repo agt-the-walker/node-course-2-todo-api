@@ -1,11 +1,8 @@
-const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs')
 
-const data = {
-  id: 10,
-}
+const password = '123abc!'
+const hashedPassword = '$2a$10$QrpofvICFVHekIn3zQStgeFfm3Yj9yj91NvYU79KzptTmZ9Unj3IC'
 
-const token = jwt.sign(data, '123abc')
-console.log(token)
-
-const decoded = jwt.verify(token, '123abc')
-console.log(decoded)
+bcrypt.compare(password, hashedPassword, (err, res) => {
+  console.log(res)
+})
