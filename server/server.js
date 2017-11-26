@@ -1,4 +1,4 @@
-require('./config/config.js')
+require('./config/config')
 
 const _ = require('lodash')
 const express = require('express')
@@ -30,7 +30,8 @@ app.get('/todos', (req, res) => {
     res.send({todos})
   }, (err) => {
     res.status(400).send(err)
-  }) })
+  })
+})
 
 app.get('/todos/:id', (req, res) => {
   const id = req.params.id
