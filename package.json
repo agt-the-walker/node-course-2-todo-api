@@ -22,7 +22,7 @@
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.15",
     "mongodb": "^2.2.33",
-    "mongoose": "^4.13.5",
+    "mongoose": "^5.7.5",
     "validator": "^9.1.2"
   },
   "devDependencies": {
